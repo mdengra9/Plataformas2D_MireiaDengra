@@ -14,15 +14,15 @@ public class Player : MonoBehaviour
     //private float _playerInputV;
 
     private Rigidbody2D _rBody2D;
-    private GroundSensor _sensor;
+    //private GroundSensor _sensor;
     private Animator _animator;
-    private SpriteRender _spriteRenderer;
+    private SpriteRenderer _spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         _rBody2D = GetComponent<Rigidbody2D>();
-        _sensor = GetComponentInChildren<GroundSensor>();
+       // _sensor = GetComponentInChildren<GroundSensor>();
         _animator = GetComponentInChildren<Animator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
         
-        if(Input.GetButtonDown("Jump") && _sensor._isGrounded)
+        if(Input.GetButtonDown("Jump") && GroundSensor._isGrounded)
         {
             Jump();
         }
@@ -59,14 +59,16 @@ public class Player : MonoBehaviour
             _animator.SetBool("IsRunning", false);
         }
 
-        if(Horizontal < 0)
+        if(_playerInputH < 0)
         {
-           _spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler (0,180,0);
+           //_spriteRenderer.flipX = true;
         }
 
-        else if(Horizontal > 0)
+        else if(_playerInputH > 0)
         {
-            _spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler (0,0,0);
+            //_spriteRenderer.flipX = false;
             //se ha de escribir igual que el parametro del animator el isRunning
         }
 

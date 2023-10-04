@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,8 @@ using UnityEngine;
 public class GroundSensor : MonoBehaviour
 
 {
-    public bool _isGrounded;
     private Animator _animator;
+    public static bool _isGrounded;
 
     void Start() 
     {
