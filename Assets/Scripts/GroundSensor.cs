@@ -9,7 +9,7 @@ public class GroundSensor : MonoBehaviour
     private Animator _animator;
     public static bool _isGrounded;
 
-    void Start() 
+    void Awake() 
     {
         _animator = GameObject.Find("mage").GetComponent<Animator>();
     }
