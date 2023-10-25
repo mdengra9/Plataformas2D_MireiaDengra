@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
        // _sensor = GetComponentInChildren<GroundSensor>();
        // _animator = GetComponentInChildren<Animator>();
         //_spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        Debug.Log(GameManager.instance.vidas);
     }
 
     // Update is called once per frame
@@ -99,5 +101,14 @@ public class Player : MonoBehaviour
     public void SignalTest()
     {
         Debug.Log("Señal recivida");
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == 6)
+        {
+            GameManager.instance.GameOver();
+            SoundManager.instance.DeathSound();
+        }
     }
 }
