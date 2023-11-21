@@ -25,12 +25,14 @@ public class Bomb : MonoBehaviour
             GameManager.instance.GameOver();
             SoundManager.instance.DeathSound();
             _animator.SetBool("Explosion", true);
-            StartCorutine(TiempoExplosion());
+            StartCoroutine("TiempoExplosion");
         }
     }
 
     IEnumerator TiempoExplosion()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Bomba fuera");
+        Destroy(this.gameObject);
     }
 }
