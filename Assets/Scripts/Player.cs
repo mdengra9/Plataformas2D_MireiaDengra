@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -19,9 +20,18 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private PlayableDirector _director;
 
+    //Score
+    private int _score;
+    public Text scoreText;
+
+    public GameObject[] Hearts;
+    private int life = 3;
+
     // Start is called before the first frame update
     void Start()
     {
+        _score = 0;
+
         _rBody2D = GetComponent<Rigidbody2D>();
        // _sensor = GetComponentInChildren<GroundSensor>();
        // _animator = GetComponentInChildren<Animator>();
@@ -109,6 +119,11 @@ public class Player : MonoBehaviour
         {
             GameManager.instance.GameOver();
             SoundManager.instance.DeathSound();
+        }
+        else if (collider.gameObject.layer == 8)
+        {
+            _score++;
+            scoreText.text = _score.ToString();
         }
     }
 }

@@ -23,7 +23,7 @@ public class Bomb : MonoBehaviour
         if (collider.gameObject.layer == 0)
         {
             GameManager.instance.GameOver();
-            SoundManager.instance.DeathSound();
+            SoundManager.instance.boom();
             _animator.SetBool("Explosion", true);
             StartCoroutine("TiempoExplosion");
         }
@@ -34,5 +34,7 @@ public class Bomb : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Debug.Log("Bomba fuera");
         Destroy(this.gameObject);
+        Player.instance.PlayerDamage();
+        SoundManager.instance.DeathSound();
     }
 }

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int score;
 
     // Start is called before the first frame update
+   
     void Awake()
     {
         if(instance != null && instance != this)

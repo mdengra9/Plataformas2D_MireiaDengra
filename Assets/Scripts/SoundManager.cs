@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance {get; private set;}
     AudioSource _sfxAudioSource;
     [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip boom;
+    [SerializeField] private AudioClip star;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,5 +33,15 @@ public class SoundManager : MonoBehaviour
     public void DeathSound()
     {
         _sfxAudioSource.PlayOneShot(deathSound);
+    }
+
+    public void Boom()
+    {
+        _sfxAudioSource.PlayOneShot(boom);
+    }
+
+    public void Star()
+    {
+        _sfxAudioSource.PlayOneShot(star);
     }
 }
