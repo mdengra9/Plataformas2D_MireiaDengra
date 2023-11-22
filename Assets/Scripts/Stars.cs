@@ -10,6 +10,7 @@ public class Stars : MonoBehaviour
         if (collider.gameObject.layer == 0)
         {
             Destroy(this.gameObject);
+            SoundManager.instance.Star();
         }
     }
 }

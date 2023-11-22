@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     private int _score;
     public Text scoreText;
 
+
     public GameObject[] Hearts;
     private int life = 3;
 

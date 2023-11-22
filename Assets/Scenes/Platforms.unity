@@ -12263,7 +12263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648722671147037033, guid: 10785b663051a4a449547cf22c7effe8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.89
+      value: -15.93
       objectReference: {fileID: 0}
     - target: {fileID: 1648722671147037033, guid: 10785b663051a4a449547cf22c7effe8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13162,8 +13162,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2120003728}
-  - component: {fileID: 2120003729}
   - component: {fileID: 2120003730}
+  - component: {fileID: 2120003731}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -13186,19 +13186,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2120003729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120003726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5958136ba7c2acf48ab2419056703e0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathSound: {fileID: 8300000, guid: 2bbe41c1ec88d0145ba4469dc24161ce, type: 3}
 --- !u!82 &2120003730
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13295,6 +13282,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2120003731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120003726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5958136ba7c2acf48ab2419056703e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 2bbe41c1ec88d0145ba4469dc24161ce, type: 3}
+  boom: {fileID: 8300000, guid: b80c09684d076704ba9a635c8a49b95d, type: 3}
+  star: {fileID: 8300000, guid: 0f4f31c3ec4b55f4ca685dce4ebd0a94, type: 3}
 --- !u!1001 &2123141982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13309,7 +13311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648722671147037033, guid: 10785b663051a4a449547cf22c7effe8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.821449
+      value: -14.92
       objectReference: {fileID: 0}
     - target: {fileID: 1648722671147037033, guid: 10785b663051a4a449547cf22c7effe8, type: 3}
       propertyPath: m_LocalPosition.z
